@@ -32,23 +32,23 @@ Go
 Create Table Raca(
 IdRaca Int Primary Key Identity(1,1),
 IdTipo_Pet Int Foreign Key References Tipo_Pet(IdTipo_Pet),
-Nome_Veterinario Char(20) Not Null
+Nome_Raca Char(20) Not Null
 );
 Go
 
-Create Table Pet(
-IdPet Int Primary Key Identity(1,1),
+Create Table Pets(
+IdPets Int Primary Key Identity(1,1),
 IdDono Int Foreign Key References Dono(IdDono),
 IdRaca int Foreign Key References Raca(IdRaca),
 Nome_Pet Varchar(20),
-Data_Nascimento Varchar(8)
+Data_Nascimento Varchar(10)
 );
 Go
 
 Create Table Consulta(
 IdConsulta Int Primary Key Identity(1,1),
-IdPet Int Foreign Key References Pet(IdPet),
+IdPet Int Foreign Key References Pets(IdPet),
 IdVeterinario int Foreign Key References Veterinario(IdVeterinario),
-Data_Consulta Varchar(8)
+Data_Consulta Varchar(10)
 );
 Go

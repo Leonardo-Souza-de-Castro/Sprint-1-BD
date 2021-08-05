@@ -46,3 +46,9 @@ Descricao_Aluguel Varchar(200) Not Null
 );
 Go
 
+Alter Table Aluga
+Add Data_devolucao Varchar(15) Not Null,
+Data_Emprestimo Varchar(15) Not Null;
+Go
+
+
