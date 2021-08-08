@@ -52,3 +52,12 @@ IdVeterinario int Foreign Key References Veterinario(IdVeterinario),
 Data_Consulta Varchar(10)
 );
 Go
+
+Alter Table Clinica
+Add Razao_Social Varchar(500) Not Null;
+Go
+
+Alter Table Veterinario
+Add CRMV Varchar(15) Not Null;
+Go
+
